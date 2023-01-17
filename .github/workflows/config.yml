@@ -8,7 +8,7 @@ jobs: # groups the jobs to be executed in this workflow
 
   build: # defines a job called build
     name: 🔨 Build # [optional] name of the job
-    runs-on: ubuntu-latest # the job will be executed on ubuntu runner. Other include: Microsoft Windows & MacOS runners
+    runs-on: Microsoft Windows # the job will be executed on ubuntu runner. Other include: Microsoft Windows & MacOS runners
     steps: # groups together all the steps that run in build job
 
       # Checks out code from the VCS to the runner
