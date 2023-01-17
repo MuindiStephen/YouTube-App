@@ -1,4 +1,4 @@
-name: Android Build # name of the workflow
+name: Android Testing-CI/CD 
 
 on:
   push:
