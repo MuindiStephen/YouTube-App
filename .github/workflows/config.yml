@@ -1,19 +1,17 @@
 name: Android Build # name of the workflow
 
 on:
-  push: # specifies events to trigger the workflow
-    branches: [ branch name ] # branches that trigger the workflow- SPECIFY YOUR BRANCH NAME
+  push:
+    branches: main
+jobs: 
 
-jobs: # groups the jobs to be executed in this workflow
-
-  build: # defines a job called build
-    name: 🔨 Build # [optional] name of the job
+  build: 
+    name: 🔨 Build and Test
     runs-on: Microsoft Windows # the job will be executed on ubuntu runner. Other include: Microsoft Windows & MacOS runners
     steps: # groups together all the steps that run in build job
 
-      # Checks out code from the VCS to the runner
-      - name: Checkout code # [optional] specifies the name of the step
-        uses: actions/checkout@v2 # specifies which action and version to execute ie. checkout@v2
+      - name: Checkout code 
+        uses: actions/checkout@v2 
 
       # Setup JDK Version 11 in the runner
       - name: Set up JDK 11
@@ -21,16 +19,10 @@ jobs: # groups the jobs to be executed in this workflow
         with:
           java-version: '11'
 
-      # Allow permissions to make gradle executable - This can removed by adding the gradlew file permission
-      # directly into the repository using `git update-index --chmod=+x gradlew`
-      # - name: Make gradle executable
-      #  run: chmod +x ./gradlew
-
-      # Execute gradle build command with stacktrace flag
       - name: Build with gradle
         run: ./gradlew build --stacktrace # Execute gradle script to build project
 
-  lint-check: # defines another job called lint
+  lint-check: 
     name: 🔍 Lint
     runs-on: Microsoft Windows
     steps:
@@ -43,14 +35,14 @@ jobs: # groups the jobs to be executed in this workflow
 
       - name: Generate lint report
         uses: actions/upload-artifact@v2 # Uses upload-artifact@v2 action to upload lint report artifact
-        with: # Define extra parameters
+        with: 
           name: lint_report.html # Name of the artifact to be uploaded
           path: app/build/reports/lint-results-debug.html # Specifies the path where the artifact to be uploaded is located
 
-  unit-tests: #Defines another job called unit tests
+  unit-tests:
     name: 🧪 Unit Tests
-    needs: [ lint-check ] # This job's execution is dependant on whether `lint-check` job completes successfully
-    runs-on: ubuntu-latest
+    needs: [ lint-check ]
+    runs-on: Microsoft Windows
     steps:
 
       - name: Checkout code
@@ -68,7 +60,7 @@ jobs: # groups the jobs to be executed in this workflow
 
 
 
-  generate-apk: # Job to generate debug apk
+  generate-apk:
     name: ⚙️Generate APK
     needs: [build, lint-check, unit-tests]
     runs-on: Microsoft Windows
