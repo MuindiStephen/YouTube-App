@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.steve_md.youtubeapp.R
 import com.steve_md.youtubeapp.databinding.FragmentSplashScreenBinding
@@ -33,6 +34,13 @@ class SplashScreenFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(R.id.action_splashScreenFragment_to_homeFragment)
         }, 3000)
+
+        (activity as AppCompatActivity).supportActionBar?.hide()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding
     }
 
 
