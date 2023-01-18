@@ -1,4 +1,4 @@
-package com.steve_md.youtubeapp.ui.fragments
+package com.steve_md.youtubeapp.ui.fragments.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

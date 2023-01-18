@@ -1,4 +1,4 @@
-package com.steve_md.youtubeapp.ui.fragments
+package com.steve_md.youtubeapp.ui.fragments.splash
 
 import android.annotation.SuppressLint
 import android.os.Bundle

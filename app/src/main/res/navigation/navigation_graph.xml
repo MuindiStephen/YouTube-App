@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.steve_md.youtubeapp.ui.fragments.SplashScreenFragment"
+        android:name="com.steve_md.youtubeapp.ui.fragments.splash.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.steve_md.youtubeapp.ui.fragments.HomeFragment"
+        android:name="com.steve_md.youtubeapp.ui.fragments.main.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 </navigation>
