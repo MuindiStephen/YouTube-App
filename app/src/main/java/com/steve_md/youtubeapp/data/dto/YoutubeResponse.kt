@@ -7,7 +7,7 @@ data class YoutubeResponse(
     @SerializedName("etag")
     val etag: String,
     @SerializedName("items")
-    val items: List<Item>,
+    val items: List<Item>,   /**Returns List of Youtube Videos and their Properties**/
     @SerializedName("kind")
     val kind: String,
     @SerializedName("nextPageToken")

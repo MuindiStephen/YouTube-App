@@ -3,6 +3,9 @@ package com.steve_md.youtubeapp.data.dto
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Video Details
+ * **/
 data class Snippet(
     @SerializedName("categoryId")
     val categoryId: String,

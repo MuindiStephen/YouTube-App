@@ -2,7 +2,9 @@ package com.steve_md.youtubeapp.data.dto
 
 
 import com.google.gson.annotations.SerializedName
-
+/**
+ * YouTubeVideo DataClass
+ * */
 data class Item(
     @SerializedName("contentDetails")
     val contentDetails: ContentDetails,
@@ -13,7 +15,7 @@ data class Item(
     @SerializedName("kind")
     val kind: String,
     @SerializedName("snippet")
-    val snippet: Snippet,
+    val snippet: Snippet,  /**Video details*/
     @SerializedName("statistics")
     val statistics: Statistics
 )
