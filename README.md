@@ -20,7 +20,7 @@
 # Development Environment
 
 * You will require latest version of Android Studio 3.0 (or newer) to be able to build the app
-* Android Studio Bumblebee | 2021.1.1 Patch 2 or Higher
+* Android Studio Dolphin | 2021.1.1 Patch 2 or Higher
 * Language: Kotlin
 * Build System: Gradle
 
