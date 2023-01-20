@@ -41,7 +41,7 @@ class KenyanYoutubeVideosViewModel @Inject constructor(
                 return Resource.Success(youtubeResponse)
             }
         }
-        Timber.e("An unexpected error occurred.")
+        Timber.e("An unexpected error occurred!")
          return Resource.Error(null, "Error occurred")
     }
 }
