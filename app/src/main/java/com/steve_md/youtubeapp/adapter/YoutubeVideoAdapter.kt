@@ -10,9 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.steve_md.youtubeapp.data.dto.Item
 import com.steve_md.youtubeapp.databinding.VideoRowBinding
-import java.time.LocalDate
 import java.time.LocalDateTime
-import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
@@ -39,14 +37,6 @@ class YoutubeVideoAdapter : ListAdapter<Item, YoutubeVideoAdapter.YoutubeVideoVi
             binding.textViewYoutubeChannelName.text = youtubeVideo?.snippet?.channelTitle
             binding.textViewVideoViews.text = viewCount(youtubeVideo?.statistics?.viewCount?.toInt())
             binding.textViewVideoUploadTime.text = formatTime(youtubeVideo?.snippet?.publishedAt)
-
-
-           /* binding.textViewVideoUploadTime.text = youtubeVideo?.snippet?.publishedAt?.let {
-                upLoadedAt(
-                    it,
-                )
-            }
-            */
         }
     }
 

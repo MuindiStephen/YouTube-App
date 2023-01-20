@@ -38,7 +38,7 @@ class KenyanYoutubeVideosViewModel @Inject constructor(
         if (youtubeResponse.isSuccessful) {
             Timber.d("Successfully fetched data")
             youtubeResponse.body()?.let { youtubeResponse ->
-                return  Resource.Success(youtubeResponse)
+                return Resource.Success(youtubeResponse)
             }
         }
         Timber.e("An unexpected error occurred.")

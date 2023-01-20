@@ -52,12 +52,19 @@ class HomeFragment : Fragment() {
     }
 
     private fun setUpYoutubeVideoRecyclerView() {
+
+        setUpProgressBar()
+
         youtubeVideoAdapter = YoutubeVideoAdapter()
         binding.youtubeVideosRecyclerView.adapter = youtubeVideoAdapter
         binding.youtubeVideosRecyclerView.layoutManager = LinearLayoutManager(
             context,
             LinearLayoutManager.VERTICAL,
             false)
+    }
+
+    private fun setUpProgressBar() {
+        binding.progressBarForLoadingVideos.visibility = View.GONE
     }
 
     override fun onDestroyView() {
