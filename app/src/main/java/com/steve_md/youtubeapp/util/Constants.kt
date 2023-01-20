@@ -3,7 +3,7 @@ package com.steve_md.youtubeapp.util
 object Constants {
 
     // Returns a list of videos that match the API request parameters.
-    const val YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3"
+    const val YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/"
 
     /**
      * *REQUIRED PARAMETERS
