@@ -12,8 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.steve_md.youtubeapp.R
 import com.steve_md.youtubeapp.databinding.FragmentSplashScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 @SuppressLint("CustomSplashScreen")
 class SplashScreenFragment : Fragment() {
 

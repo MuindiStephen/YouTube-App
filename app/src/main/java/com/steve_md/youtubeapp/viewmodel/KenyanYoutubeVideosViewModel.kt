@@ -1,5 +1,6 @@
 package com.steve_md.youtubeapp.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,6 +11,7 @@ import com.steve_md.youtubeapp.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
+import timber.log.Timber
 import javax.inject.Inject
 
 
@@ -22,6 +24,10 @@ class KenyanYoutubeVideosViewModel @Inject constructor(
     val kenyanYoutubeVideosViewModel:LiveData<Resource<YoutubeResponse>>
     get() = _kenyanPopularYoutubeVideos
 
+    init {
+        getKenyanPopularVideos()
+    }
+
     private fun getKenyanPopularVideos() = viewModelScope.launch {
         _kenyanPopularYoutubeVideos.postValue(Resource.Loading())
         val youtubeResponse = youtubeVideosRepository.getKenyanPopularYoutubeVideos()
@@ -30,10 +36,12 @@ class KenyanYoutubeVideosViewModel @Inject constructor(
 
     private fun checkYoutubeResponse(youtubeResponse: Response<YoutubeResponse>): Resource<YoutubeResponse> {
         if (youtubeResponse.isSuccessful) {
+            Timber.d("Successfully fetched data")
             youtubeResponse.body()?.let { youtubeResponse ->
-                return Resource.Success(youtubeResponse)
+                return  Resource.Success(youtubeResponse)
             }
         }
+        Timber.e("An unexpected error occurred.")
          return Resource.Error(null, "Error occurred")
     }
 }
