@@ -8,12 +8,11 @@
 
 ## Screens
 <p align="left">
- <img src="screenshots/Screenshot_20230120-154939.jpg" width=30% height=30%>
- <img src="screenshots/Screenshot_20230120-154948.jpg" width=30% height=30%>
- <img src="screenshots/Screenshot_20230120-155012.jpg" width=30% height=30%>
+ <img src="screenshots/Screenshot_20230120-154939.jpg" width=25% height=25%>
+ <img src="screenshots/Screenshot_20230120-154948.jpg" width=25% height=25%>
+ <img src="screenshots/Screenshot_20230120-155012.jpg" width=25% height=25%>
 </p>
 
 <p align="left">
-  <img src="screenshots/detailsScreen.png" width=30% height=30%>
-  <img src="screenshots/searchScreen.png" width=30% height=30%>
+  <img src="Screenshot_20230120-163004.jpg" width=250% height=25%>
 </p>
