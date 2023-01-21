@@ -44,12 +44,12 @@
 - Gradle
   * [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html) - For reference purposes, here's an [article](https://evanschepsiror.medium.com/migrating-to-kotlin-dsl-4ee0d6d5c977) explaining the migration.
   * Plugins
-      - [Ktlint](https://github.com/JLLeitschuh/ktlint-gradle) - creates convenient tasks in your Gradle project that run ktlint checks or do code auto format.
+      - [KtLint](https://github.com/JLLeitschuh/ktlint-gradle) - creates convenient tasks in your Gradle project that run ktlint checks or do code auto format.
       
       
 ## POSTMAN - Testing API
  ![Screenshot (179)](https://user-images.githubusercontent.com/57146128/213717311-78f5a6de-6c55-47f7-a927-910e9a52fe1e.png)
-      ![Screenshot (178)](https://user-images.githubusercontent.com/57146128/213717785-e42c2e96-141b-4ca3-9cf6-58e4a594775a.png)
+ ![Screenshot (178)](https://user-images.githubusercontent.com/57146128/213717785-e42c2e96-141b-4ca3-9cf6-58e4a594775a.png)
 
 
 
