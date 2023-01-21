@@ -2,4 +2,15 @@
     <string name="app_name">YouTube App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splashimageview">SplashImageView</string>
+    <string name="appicon">appIcon</string>
+    <string name="youtube">YouTube</string>
+    <string name="explore">| Explore</string>
+    <string name="all">All</string>
+    <string name="music">Music</string>
+    <string name="new_to_you">New to you</string>
+    <string name="recently_uploaded">Recently uploaded</string>
+    <string name="comedy">Comedy</string>
+    <string name="castimageview">castImageview</string>
+    <string name="channelpicture">channelPicture</string>
 </resources>

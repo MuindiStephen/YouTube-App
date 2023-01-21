@@ -35,7 +35,8 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_account_profile" />
+                app:srcCompat="@drawable/ic_account_profile"
+                android:contentDescription="@string/channelpicture" />
 
             <TextView
                 android:id="@+id/textViewVideoTitle"

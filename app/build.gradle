@@ -43,6 +43,7 @@ dependencies {
     def lifecycle_version = "2.5.1"
     def timber_version = "5.0.1"
     def hilt_version = "2.44"
+    def paging_version = "3.1.1"
 
     // KtX
     implementation 'androidx.core:core-ktx:1.9.0'
@@ -99,6 +100,9 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     kapt 'com.github.bumptech.glide:compiler:4.14.2'
+
+        // Paging Library - Paging3
+    implementation("androidx.paging:paging-runtime-ktx:$paging_version")
 }
 
 // Allow references to generated code
