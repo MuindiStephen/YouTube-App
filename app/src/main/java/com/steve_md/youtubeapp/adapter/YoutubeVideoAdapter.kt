@@ -4,6 +4,7 @@ import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +15,7 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
-class YoutubeVideoAdapter : ListAdapter<Item, YoutubeVideoAdapter.YoutubeVideoViewHolder>(YoutubeVideoDiffUtil) {
+class YoutubeVideoAdapter : PagingDataAdapter<Item, YoutubeVideoAdapter.YoutubeVideoViewHolder>(YoutubeVideoDiffUtil) {
     object YoutubeVideoDiffUtil : DiffUtil.ItemCallback<Item>() {
         override fun areItemsTheSame(oldItem: Item, newItem: Item): Boolean {
             return oldItem.id == newItem.id
