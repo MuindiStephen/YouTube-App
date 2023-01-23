@@ -1,10 +1,8 @@
 package com.steve_md.youtubeapp.viewmodel
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
+import androidx.paging.cachedIn
 import com.steve_md.youtubeapp.data.dto.YoutubeResponse
 import com.steve_md.youtubeapp.data.repository.GetKenyanPopularYoutubeVideosRepository
 import com.steve_md.youtubeapp.util.Resource
@@ -20,6 +18,15 @@ class KenyanYoutubeVideosViewModel @Inject constructor(
     private val youtubeVideosRepository: GetKenyanPopularYoutubeVideosRepository
 ) : ViewModel(){
 
+    // Returns a flow of PagingData and caches the PagingData through the viewModel
+    // and return livedata to collect the latest data from PagingData
+
+    val kenyanYoutubeVideosViewModel = youtubeVideosRepository.getYoutubeVideos()
+        .flow.cachedIn(viewModelScope).asLiveData()
+
+
+
+    /*
     private val _kenyanPopularYoutubeVideos : MutableLiveData<Resource<YoutubeResponse>> = MutableLiveData()
     val kenyanYoutubeVideosViewModel:LiveData<Resource<YoutubeResponse>>
     get() = _kenyanPopularYoutubeVideos
@@ -44,4 +51,6 @@ class KenyanYoutubeVideosViewModel @Inject constructor(
         Timber.e("An unexpected error occurred!")
          return Resource.Error(null, "Error occurred")
     }
+
+     */
 }

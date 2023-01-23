@@ -5,6 +5,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.steve_md.youtubeapp.data.dto.YoutubeResponse
 import com.steve_md.youtubeapp.data.network.api.ApiService
+import com.steve_md.youtubeapp.data.network.api.pagingsource.YoutubeKenyanPopularVideosPagingSource
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -14,7 +15,7 @@ import javax.inject.Inject
 class GetKenyanPopularYoutubeVideosRepository @Inject constructor(
     private val apiService: ApiService
 ) {
-    fun getVideos() = Pager(
+    fun getYoutubeVideos() = Pager(
         config = PagingConfig(
             pageSize = 30,
             maxSize = 150,
