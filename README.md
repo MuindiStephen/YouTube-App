@@ -40,6 +40,7 @@
   - [OkHttp interceptor](https://github.com/square/okhttp/tree/master/okhttp-logging-interceptor) - Logs HTTP requests and responses
   - [Flow](https://kotlinlang.org/docs/reference/coroutines/flow.html) - An asynchronous version of a Sequence, a type of collection whose values are lazily produced. Flow handles the stream of data asynchronously that executes sequentially.
   - [Dagger-Hilt](https://insert-koin.io/) - Hilt is a dependency injection library for Android that reduces the boilerplate of doing manual dependency injection in your project.
+  - [Paging - 3](https://developer.android.com/codelabs/android-paging#5) - The Paging library makes it easier for you to load data incrementally and gracefully within your app's UI
 
 - Gradle
   * [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html) - For reference purposes, here's an [article](https://evanschepsiror.medium.com/migrating-to-kotlin-dsl-4ee0d6d5c977) explaining the migration.
