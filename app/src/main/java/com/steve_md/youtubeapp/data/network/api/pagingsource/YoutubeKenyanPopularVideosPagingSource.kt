@@ -1,6 +1,5 @@
 package com.steve_md.youtubeapp.data.network.api.pagingsource
 
-import android.annotation.SuppressLint
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.steve_md.youtubeapp.data.dto.Item
@@ -15,7 +14,7 @@ class YoutubeKenyanPopularVideosPagingSource(
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Item> {
         return try {
-            val page:Int = params.key?: 0           // Elvis operator return a not null current page of data
+            val page: Int? = params.key          // Elvis operator return a not null current page of data
 
             val youtubeObject = apiService.getYoutubeVideos()
             LoadResult.Page(
