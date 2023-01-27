@@ -47,7 +47,7 @@ class HomeFragment : Fragment() {
 
     private fun youtubeVideosObserver() {
         youtubeVideosViewModel.kenyanYoutubeVideosViewModel.observe(viewLifecycleOwner) {
-            youtubeVideoAdapter.submitList(it.data?.items)
+            youtubeVideoAdapter.submitData(lifecycle = this@HomeFragment.lifecycle, it)
         }
     }
 
