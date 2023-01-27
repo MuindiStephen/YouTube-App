@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.paging.PagingData
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.steve_md.youtubeapp.adapter.YoutubeVideoAdapter
+import com.steve_md.youtubeapp.data.dto.Item
 import com.steve_md.youtubeapp.databinding.FragmentHomeBinding
 import com.steve_md.youtubeapp.viewmodel.KenyanYoutubeVideosViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,7 +49,7 @@ class HomeFragment : Fragment() {
 
     private fun youtubeVideosObserver() {
         youtubeVideosViewModel.kenyanYoutubeVideosViewModel.observe(viewLifecycleOwner) {
-            youtubeVideoAdapter.submitData()
+            youtubeVideoAdapter.submitData(lifecycle = this@HomeFragment.lifecycle, it)
         }
     }
 
