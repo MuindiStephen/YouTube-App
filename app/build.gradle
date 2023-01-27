@@ -53,7 +53,6 @@ dependencies {
 
     // Material
     implementation 'com.google.android.material:material:1.7.0'
-
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     // Android Testing
@@ -97,6 +96,7 @@ dependencies {
 
     // Coil
     implementation("io.coil-kt:coil:0.9.1")
+
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     kapt 'com.github.bumptech.glide:compiler:4.14.2'
