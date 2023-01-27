@@ -15,14 +15,15 @@ import javax.inject.Inject
 
 @HiltViewModel
 class KenyanYoutubeVideosViewModel @Inject constructor(
-    private val youtubeVideosRepository: GetKenyanPopularYoutubeVideosRepository
+    youtubeVideosRepository: GetKenyanPopularYoutubeVideosRepository
 ) : ViewModel(){
 
     // Returns a flow of PagingData and caches the PagingData through the viewModel
     // and return livedata to collect the latest data from PagingData
 
     val kenyanYoutubeVideosViewModel = youtubeVideosRepository.getYoutubeVideos()
-        .flow.cachedIn(viewModelScope).asLiveData()
+        .cachedIn(viewModelScope).asLiveData()
+        //.flow.cachedIn(viewModelScope).asLiveData()
 
 
 
