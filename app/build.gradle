@@ -103,6 +103,8 @@ dependencies {
 
     // Paging Library - Paging3
     implementation("androidx.paging:paging-runtime-ktx:$paging_version")
+
+    // YouTube Player
 }
 
 // Allow references to generated code
