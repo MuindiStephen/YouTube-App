@@ -18,8 +18,7 @@ class YoutubeKenyanPopularVideosPagingSource(
             val page:Int = params.key?: 0           // Elvis operator return a not null current page of data
 
             val youtubeObject = apiService.getYoutubeVideos()
-
-              LoadResult.Page(
+            LoadResult.Page(
                     data = youtubeObject.body()!!.items,
                     prevKey = null,
                     nextKey = page
