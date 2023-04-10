@@ -1,7 +1,7 @@
 # Youtube App
  
 ## Youtube API Documentation
-- This is a Cloned-Youtube App that fetches popular Videos from [Youtube DATA API > Documentation](https://developers.google.com/youtube/v3/docs/)
+- This is a Cloned-Youtube App that fetches popular Videos from [Youtube DATA API > Documentation] and uses Paging 3 Library in Android [pagination](https://developers.google.com/youtube/v3/docs/)
  
 ## Generate Youtube Api key
 - [Follow this tutorial to generate your own API KEY](https://blog.hubspot.com/website/how-to-get-youtube-api-key)
